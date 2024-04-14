@@ -668,7 +668,7 @@ class FFXIVBenchmarkLauncher(QApplication):
       "SYS.OcclusionCulling_DX11=" + str(int(self.chk_occlusion_culling.isChecked())),
       "SYS.LodType_DX11=" + str(int(self.chk_distance_lod.isChecked())),
       "SYS.ReflectionType_DX11=" + str(3 - self.cb_reflections.currentIndex()),
-      "SYS.AntiAliasing_DX11=" + str(int(self.chk_fxaa.isChecked())),
+      "SYS.AntiAliasing_DX11=" + str(3), #str(int(self.chk_fxaa.isChecked())),
       "SYS.TranslucentQuality_DX11=" + str(1 - self.cb_transparent_lighting.currentIndex()),
       "SYS.GrassQuality_DX11=" + str(3 - self.cb_grass_quality.currentIndex()),
       "SYS.ShadowLOD_DX11=" + str(int(self.chk_shadow_lod.isChecked())),
@@ -689,7 +689,9 @@ class FFXIVBenchmarkLauncher(QApplication):
       "SYS.ParallaxOcclusion_DX11=" + str(1 - self.cb_parallax_occlusion.currentIndex()),
       "SYS.Tessellation_DX11=" + str(1 - self.cb_tessellation.currentIndex()),
       "SYS.GlareRepresentation_DX11=" + str(1 - self.cb_glare.currentIndex()),
-      "SYS.DistortionWater_DX11=" + str(2 - self.cb_water_refraction.currentIndex()) ]
+      "SYS.DistortionWater_DX11=" + str(2 - self.cb_water_refraction.currentIndex()), 
+      "SYS.GraphicsRezoUpscaleType=" + str(1)
+    ]
 
     return cmd_args
 
